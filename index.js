@@ -6,17 +6,17 @@ window.onload =function() {
    let offset = 0;
    let resultingText = "";
 
-   $("#cipher-button").click(function() {
-     offset = $("#offset-digit").val();
-     originalText = $("#original-text").val();
-     $("#resulting-text").text(cipher());
-   });
+   document.getElementById("cipher-button").onclick = function() {
+     offset = document.getElementById("offset-digit").value();
+     originalText = document.getElementById("original-text").value();
+   document.getElementById("resulting-text").text(cipher());
+   };
 
-   $("#decipher-button").click(function() {
-     offset = $("#offset-digit").val();
-     originalText = $("#original-text").val();
-     $("#resulting-text").text(decipher());
-   });
+   document.getElementById("decipher-button").onclick = function() {
+     offset = document.getElementById("offset-digit").value();
+     originalText = document.getElementById("original-text").value();
+   document.getElementById("resulting-text").text(decipher());
+   };
 
   function cipher() {
 
