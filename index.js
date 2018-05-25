@@ -3,12 +3,13 @@ window.onload =function() {
    const enAlphabetLength =26;
    const asciiA = 65;
    let cipheredText = "";
-   let offset = 2;
+   let offset = 0;
    let originalText = "";
 
    $("#cipher-button").click(function() {
+     offset = $("#offset-digit").val();
      originalText = $("#original-text").val();
-  $("#ciphered-text").text( originalText );
+  $("#ciphered-text").text(cipher());
    });
 
   function cipher() {
