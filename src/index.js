@@ -2,14 +2,20 @@ window.onload =function() {
 
    const enAlphabetLength =26;
    const asciiA = 65;
-   let cipheredText = "";
-   let offset = 0;
    let originalText = "";
+   let offset = 0;
+   let resultingText = "";
 
    $("#cipher-button").click(function() {
      offset = $("#offset-digit").val();
      originalText = $("#original-text").val();
-  $("#ciphered-text").text(cipher());
+     $("#resulting-text").text(cipher());
+   });
+
+   $("#decipher-button").click(function() {
+     offset = $("#offset-digit").val();
+     originalText = $("#original-text").val();
+     $("#resulting-text").text(decipher());
    });
 
   function cipher() {
@@ -19,13 +25,26 @@ window.onload =function() {
       let cipheredAsciiCode = (originalAsciiCode - asciiA + offset)
       % enAlphabetLength + asciiA;
       let cipheredCharacter = String.fromCharCode (cipheredAsciiCode);
-      cipheredText = cipheredText + cipheredCharacter;
+      resultingText = resultingText + cipheredCharacter;
 
 
     }
-    return cipheredText
+    return resultingText
   }
 
+  function decipher() {
+
+    for ( charIndex = 0; charIndex < originalText.length; charIndex++) {
+      let originalAsciiCode = originalText.charCodeAt(charIndex);
+      let cipheredAsciiCode = (originalAsciiCode - asciiA - offset)
+      % enAlphabetLength + asciiA;
+      let cipheredCharacter = String.fromCharCode (cipheredAsciiCode);
+      resultingText = resultingText + cipheredCharacter;
+
+
+    }
+    return resultingText
+  }
 
 
 };
