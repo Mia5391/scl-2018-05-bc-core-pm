@@ -7,15 +7,15 @@ window.onload =function() {
    let resultingText = "";
 
    document.getElementById("cipher-button").onclick = function() {
-     offset = document.getElementById("offset-digit").value();
-     originalText = document.getElementById("original-text").value();
-   document.getElementById("resulting-text").text(cipher());
+     offset = document.getElementById("offset-digit").value;
+     originalText = document.getElementById("original-text").value;
+   document.getElementById("resulting-text").innerHTML = (cipher());
    };
 
    document.getElementById("decipher-button").onclick = function() {
-     offset = document.getElementById("offset-digit").value();
-     originalText = document.getElementById("original-text").value();
-   document.getElementById("resulting-text").text(decipher());
+     offset = document.getElementById("offset-digit").value;
+     originalText = document.getElementById("original-text").value;
+   document.getElementById("resulting-text").innerHTML = (decipher());
    };
 
   function cipher() {
