@@ -3,14 +3,21 @@
 <head>
     <script src="index.js"></script>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Libre+Baskerville" rel="stylesheet">
 </head>
 <body>
 
   <div id="root">
 
-    <h2>Welcome to the Caesar Cipher</h2>
+    <h1>Welcome to the Caesar Cipher</h1>
+    <h2>Here's how it works: </h2>
+    <h3>1. Enter text to be hidden or revealed.</h3>
+    <h3>2. Enter offset.</h3>
+    <h3>3. Press "Hide" or "Reveal."</h3>
+    
     <span>Enter Text <input type="text" id="original-text"></span>
     <div>Offset: <input type="text" id="offset-digit"></div>
     <div><button id="cipher-button">Hide message </button>
