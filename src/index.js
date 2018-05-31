@@ -8,7 +8,7 @@ window.onload =function() {
      offsetInput = document.getElementById("offset-digit").value;
      if (isInteger(offsetInput)) {
        originalText = document.getElementById("original-text").value;
-       document.getElementById("resulting-text").innerHTML = (cipher.encode(offsetInput, originalText));
+       document.getElementById("resulting-text").innerHTML = (cipher.encode(originalText, offsetInput));
      } else {
        document.getElementById("resulting-text").innerHTML = "Error";
      }
@@ -18,7 +18,7 @@ window.onload =function() {
      offsetInput = document.getElementById("offset-digit").value;
      if (isInteger(offsetInput)) {
        originalText = document.getElementById("original-text").value;
-       document.getElementById("resulting-text").innerHTML = (cipher.decode(offsetInput, originalText));
+       document.getElementById("resulting-text").innerHTML = (cipher.decode(originalText, offsetInput));
      } else {
        document.getElementById("resulting-text").innerHTML = "Error";
      }

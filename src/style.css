@@ -1,1 +1,14 @@
-/* Acá va tu código */
+h1{
+  font-family: 'IM Fell French Canon SC', serif;
+  text-align: center;
+  font-size: 50px;
+  color: black;
+
+}
+h2,h3{
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  font-size: 30px;
+  color: gray;
+
+}
