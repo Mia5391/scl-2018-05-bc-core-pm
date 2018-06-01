@@ -65,7 +65,7 @@ integral.
 
 ## Consideraciones generales
 
-Deben comenzar a familiarizarse con ES6 por lo cual tendrán que hacer uso de 
+Deben comenzar a familiarizarse con ES6 por lo cual tendrán que hacer uso de
 `const`, `let` y `arrow function`.
 En este proyecto NO está permitido usar librerías o frameworks, sólo
 [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e).
@@ -141,7 +141,7 @@ La interfaz debe permitir al usuario:
        queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
        que queremos cifrar.
     - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
-      queremos mover a la izquierda del alfabeto y `string` el mensaje (texto) 
+      queremos mover a la izquierda del alfabeto y `string` el mensaje (texto)
       que queremos descifrar.
 * `src/index.js`: acá debes escuchar eventos del DOM, invocar `cipher.encode()`
   o `cipher.decode()` según sea necesario y actualizar el resultado en la UI.
@@ -150,13 +150,13 @@ La interfaz debe permitir al usuario:
 
 ## Hacker edition
 
-No estás limitada a implementar solo la parte obligatoria. 
+No estás limitada a implementar solo la parte obligatoria.
 Te sugerimos algunas cosas:
 * crear al menos un test siguiendo el formato dado.
 * que el programa sea capaz de cifrar minúsculas.
-* te sugerimos crear también una función `cipher.createCipherWithOffset()` 
-  que reciba un offset y devuelva un nuevo objeto con dos métodos 
-  (`encode` y `decode`) que solo reciban el string y usen el `offset` 
+* te sugerimos crear también una función `cipher.createCipherWithOffset()`
+  que reciba un offset y devuelva un nuevo objeto con dos métodos
+  (`encode` y `decode`) que solo reciban el string y usen el `offset`
   que se pasó a `createCipherWithOffset` a la hora de crear el objeto.
 
 Lo anterior, nos ayuda a observar tu capacidad de autoaprendizaje, pudiendo
