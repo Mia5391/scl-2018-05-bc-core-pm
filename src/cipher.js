@@ -8,7 +8,7 @@ window.cipher = {
 //Parsing offset input to ensure it is a number
     let offset = parseInt(offsetInput);
 
-    for ( charIndex = 0; charIndex < originalText.length; charIndex++) {
+    for (let charIndex = 0; charIndex < originalText.length; charIndex++) {
       let originalAsciiCode = originalText.charCodeAt(charIndex);
 //Using ternary operator to figure out which ASCII starting position to use, depending on wether it is upper or lower case
       let startingAsciiPosition = originalAsciiCode >= 97 ? asciiLowerCaseA : asciiA;
@@ -27,10 +27,9 @@ window.cipher = {
     let resultingText = "";
     let offset = parseInt(offsetInput);
 
-    for ( charIndex = 0; charIndex < originalText.length; charIndex++) {
+    for (let charIndex = 0; charIndex < originalText.length; charIndex++) {
       let originalAsciiCode = originalText.charCodeAt(charIndex);
-      let startingAsciiPosition = originalAsciiCode >= 97 ? asciiLowerCaseA : asciiA;
-      let decipheredAsciiCode = Math.abs(originalAsciiCode - startingAsciiPosition - offset) % enAlphabetLength + startingAsciiPosition;
+      let decipheredAsciiCode = (originalAsciiCode + asciiA - offset) % enAlphabetLength + asciiA;
       let decipheredCharacter = String.fromCharCode (decipheredAsciiCode);
       resultingText += decipheredCharacter;
     }
