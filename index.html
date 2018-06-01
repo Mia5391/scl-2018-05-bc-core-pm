@@ -8,21 +8,23 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Libre+Baskerville" rel="stylesheet">
 </head>
-<body>
-<body background="https://c2.staticflickr.com/8/7414/14012567238_0943f83e1b_b.jpg">
+
+<body background="https://c2.staticflickr.com/8/7414/14012567238_0943f83e1b_b.jpg" id="background-image">
   <div id="root">
 
     <h1><br>Welcome to the Caesar Cipher</h1>
     <h2>Here's how it works: </h2>
     <h3><p>1. Enter text to be hidden or revealed.<br>2. Enter offset.<br>3. Press "Hide" or "Reveal."</p></h3>
 
+    <h4>
+      <span>Enter Text: <input type="text" id="original-text"></span>
+      <div>Offset: <input type="text" id="offset-digit"></div>
+      <div><button id="cipher-button">Hide message </button>
+      <button id="decipher-button">Reveal message </button></div>
 
-    <span>Enter Text <input type="text" id="original-text"></span>
-    <div>Offset: <input type="text" id="offset-digit"></div>
-    <div><button id="cipher-button">Hide message </button>
-    <button id="decipher-button">Reveal message </button></div>
+      <div id="resulting-text"></div>
 
-    <div id="resulting-text"></div>
+    </h4>
 
 
   </div>
